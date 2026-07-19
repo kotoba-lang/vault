@@ -1,0 +1,1 @@
+{:schema "etzhayyim.migration/repository-v1" :source-revision "011cf6e383bd5abaaef9fc26bfd446190bb361fa" :source-path "60-apps/etzhayyim-project-vault" :canonical-files ["README.edn" "migration.edn"]}

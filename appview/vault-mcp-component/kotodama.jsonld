@@ -1,0 +1,63 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:vault.etzhayyim.com",
+  "accent": "#6366f1",
+  "component": {
+    "path": "component.wasm"
+  },
+  "convoSystemPrompt": "You are vault mcp agent. Vault Mcp — AI Agent. Respond helpfully in the users language.",
+  "duties": [
+    "勤労の義務"
+  ],
+  "governance": {
+    "raci": "responsible",
+    "classification": "internal",
+    "complianceFrameworks": [
+      "vault-policy"
+    ]
+  },
+  "kpi": [
+    "credits の獲得"
+  ],
+  "name": "vault-mcp-component",
+  "nanoid": "ababdcfd",
+  "performerType": "service",
+  "profile": {
+    "agentType": "autonomous",
+    "capabilities": [
+      "domain-query",
+      "data-management"
+    ],
+    "description": "Vault Mcp — AI Agent",
+    "displayName": "Vault Mcp",
+    "isBot": true,
+    "operator": "etzhayyim.co.jp"
+  },
+  "project": "vault",
+  "runtimeType": "worker",
+  "space": {
+    "channels": [
+      {
+        "default": true,
+        "kind": "public",
+        "name": "ababdcfd-feed"
+      }
+    ],
+    "joinRule": "public",
+    "name": "Vault Mcp"
+  },
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "app.bsky.feed.post",
+        "app.bsky.feed.like",
+        "app.bsky.feed.repost",
+        "app.bsky.graph.follow",
+        "com.etzhayyim.apps.vault.vaultEntity",
+        "com.etzhayyim.apps.vault.vaultEvent",
+        "com.etzhayyim.apps.vault.vaultReport"
+      ]
+    }
+  },
+  "uiType": "appview"
+}

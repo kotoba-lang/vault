@@ -1,0 +1,93 @@
+{
+  "@context": [
+    "https://schema.org/",
+    {
+      "etzhayyim": "https://etzhayyim.com/schemas/",
+      "capabilities": "etzhayyim:capabilities",
+      "survivalIndicators": "etzhayyim:survivalIndicators",
+      "scheduler": "etzhayyim:scheduler",
+      "milestones": "etzhayyim:milestones",
+      "blockers": "etzhayyim:blockers",
+      "dependsOn": {
+        "@id": "etzhayyim:dependsOn",
+        "@type": "@id"
+      },
+      "ingestKey": "etzhayyim:ingestKey",
+      "window": "etzhayyim:window",
+      "valueUpdatedAt": "etzhayyim:valueUpdatedAt"
+    }
+  ],
+  "@type": "Project",
+  "identifier": "etzhayyim-project-vault",
+  "name": "ai etzhayyim project vault",
+  "status": "Planned",
+  "description": "TBD",
+  "capabilities": {
+    "@type": "DefinedTermSet",
+    "name": "Capabilities",
+    "description": "Summary of the capabilities this project is responsible for (CV-1).",
+    "terms": []
+  },
+  "survivalIndicators": [
+    {
+      "@type": "PropertyValue",
+      "identifier": "requests",
+      "name": "Requests",
+      "description": "Request count (traffic) as a basic survival indicator.",
+      "unitText": "count",
+      "value": null,
+      "ingestKey": "requests",
+      "window": "1d",
+      "valueUpdatedAt": null
+    },
+    {
+      "@type": "PropertyValue",
+      "identifier": "gccCredit",
+      "name": "GCC Credit",
+      "description": "GCC credit balance (or net credit change) as a basic survival indicator.",
+      "unitText": "GCC",
+      "value": null,
+      "ingestKey": "gccCredit",
+      "window": "1d",
+      "valueUpdatedAt": null
+    }
+  ],
+  "scheduler": "scheduler.jsonld",
+  "rdfUnifiedDocuments": {
+    "@type": "Dataset",
+    "name": "Unified top-level RDF/JSON-LD documents",
+    "description": "Consolidated from project top-level *.jsonld files except PROJECT.jsonld.",
+    "documents": [
+      {
+        "fileName": "scheduler.jsonld",
+        "content": {
+          "@context": [
+            "https://schema.org/",
+            {
+              "etzhayyim": "https://etzhayyim.com/schemas/",
+              "capabilities": "etzhayyim:capabilities",
+              "survivalIndicators": "etzhayyim:survivalIndicators",
+              "scheduler": "etzhayyim:scheduler",
+              "milestones": "etzhayyim:milestones",
+              "blockers": "etzhayyim:blockers",
+              "dependsOn": {
+                "@id": "etzhayyim:dependsOn",
+                "@type": "@id"
+              },
+              "ingestKey": "etzhayyim:ingestKey",
+              "window": "etzhayyim:window",
+              "valueUpdatedAt": "etzhayyim:valueUpdatedAt"
+            }
+          ],
+          "@type": "CreativeWork",
+          "name": "ai etzhayyim project vault Scheduler",
+          "identifier": "etzhayyim-project-vault/scheduler",
+          "description": "Project schedule (milestones) and blockers.",
+          "dateCreated": "2026-02-15T04:25:26+00:00",
+          "milestones": [],
+          "blockers": []
+        }
+      }
+    ]
+  }
+}
