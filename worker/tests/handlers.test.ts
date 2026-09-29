@@ -1,8 +1,8 @@
 /**
  * vault worker — security-invariant tests (coverage loop iteration 4).
  *
- * The zero-knowledge secret manager (1,323 LoC, CLAUDE.md crypto model) had
- * zero tests. These cover the invariants the CLAUDE.md declares, driven
+ * The zero-knowledge secret manager (1,323 LoC, AGENTS.md crypto model) had
+ * zero tests. These cover the invariants the AGENTS.md declares, driven
  * through the REAL authenticate/requireVaultRole/handler code against a
  * programmable fake D1 and a fake AUTH_SERVICE binding:
  *   - auth fail-closed (missing bearer, AUTH_SERVICE rejection, bad payload)
@@ -203,7 +203,7 @@ describe("handleAddMember role allowlist", () => {
     wrappedVaultKey: "wvk", memberDeviceKeyId: "dk1",
   };
 
-  it("defaults an unknown role to reader (CLAUDE.md: no auto-grant escalation)", async () => {
+  it("defaults an unknown role to reader (AGENTS.md: no auto-grant escalation)", async () => {
     const { env, calls } = makeEnv({ firstQueue: [{ role: "admin" }] });
     const res = await handleAddMember(reqJson({ ...body, role: "superuser" }), env);
     expect(res.status).toBe(200);
